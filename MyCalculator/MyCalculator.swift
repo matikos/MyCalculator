@@ -17,4 +17,4 @@ func toInt() -> Int? {
     }
 }
 
-var EndResult = toInt()
+var EndResult = (toInt())!
