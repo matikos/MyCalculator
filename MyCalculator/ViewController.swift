@@ -14,9 +14,12 @@ class ViewController: UIViewController {
     var performingMath = false;
     var operation = 0;
     var outcome: Double = 0
+//    var startScreen: String = "0"
     
     @IBOutlet weak var label: UILabel!
+    
     @IBAction func numbers(_ sender: UIButton) {
+        
         if performingMath == true {
             label.text = String(sender.tag - 1)
             numberOnScreen = Double(label.text!)!
@@ -24,8 +27,10 @@ class ViewController: UIViewController {
         
         }
         else {
+            
             label.text = label.text! + String(sender.tag - 1)
             numberOnScreen = Double(label.text!)!
+            
         }
     }
     
@@ -51,6 +56,15 @@ class ViewController: UIViewController {
                 //Add
                 label.text = "+"
             }
+//            else if sender.tag == 17 {
+//                numberOnScreen *= -1
+//            }
+//            else if sender.tag == 18 {
+//                numberOnScreen /= 100
+//            }
+//            else if sender.tag == 19 {
+//                numberOnScreen
+//            }
             operation = sender.tag
             performingMath = true
         }
@@ -74,7 +88,7 @@ class ViewController: UIViewController {
                 outcome = (previousNumber + numberOnScreen)
             }
             
-                label.text = String(outcome)
+            label.text = String(outcome)
         }
         
         else if sender.tag == 11 {

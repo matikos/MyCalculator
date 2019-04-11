@@ -9,12 +9,13 @@
 import Foundation
 var outcome: Double = 0
 
-func toInt() -> Int? {
-    if outcome > Double(Int.min) && outcome < Double(Int.max) {
-        return Int(outcome)
+func toInt(outcome lol: Double) -> Int? {
+    if lol > Double(Int.min) && lol < Double(Int.max) {
+        return Int(lol)
     } else {
         return nil
     }
+        
 }
 
-var EndResult = (toInt())!
+
